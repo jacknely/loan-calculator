@@ -1,16 +1,31 @@
+"""
+Contains Loan class and associated variables, properties and methods
+"""
+
 
 class Loan:
-
+    """
+    Class variables from Loan: Period, maximum loan, minimum loan and loan increment
+    """
     period = 36
     max_loan = 15000
     min_loan = 1000
     increase = 100
 
     def __init__(self, selected_lenders, amount):
+        """
+        Initialises a pd dataframe of selected lenders
+        :param selected_lenders: dataframe passed from lenders
+        :param amount: loan amount requested, input by user
+        """
         self.results = selected_lenders
         self.amount = amount
 
     def calc_offer(self):
+        """
+        Calculates interest rate of offer for each lender dataframe
+        :return: dataframe with montly payments in
+        """
         self.results['Rate'].iloc[-1] = self.delta_rate  # Calculates new rate for portioned value
         self.results['Available'].iloc[-1] = self.delta_amount  # Calculates new available for portioned value
         a = self.results['Available']  # amount
