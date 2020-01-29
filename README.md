@@ -26,9 +26,9 @@ cmd> [application] [market_file] [loan_amount]
 
 Example:
 ```
-cmd> quote.exe market.csv 1500
+cmd> app.py market.csv 1500
 ```
- 
+
 The application should produce output in the form:
 ```
 Requested amount: £XXXX
