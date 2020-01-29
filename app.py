@@ -29,6 +29,6 @@ def main(lenders_info, amount):
 
 
 if __name__ == '__main__':
-    A = 'market.csv'  # sys.argv[1]
-    B = 1000  # int(sys.argv[2])
+    A = sys.argv[1]
+    B = int(sys.argv[2])
     main(A, B)
